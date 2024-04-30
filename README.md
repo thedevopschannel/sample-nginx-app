@@ -12,7 +12,7 @@ Building Docker Image and pushing to a Public Docker Repository
 ------------
 ```
 docker build -t sample-nginx-app:v1 .
-docker tag sample-nginx-app thedevopschannel/sample-nginx-app:v1
+docker tag sample-nginx-app:v1 thedevopschannel/sample-nginx-app:v1
 docker tag sample-nginx-app:v1 thedevopschannel/sample-nginx-app:v1
 docker push thedevopschannel/sample-nginx-app:v1
 
