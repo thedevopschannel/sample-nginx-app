@@ -57,3 +57,8 @@ spec:
   imagePullSecrets:
   - name: regcred
 ```
+Expose the App
+```
+kubectl expose pod yello --target-port=80 --port=8080 --type=NodePort
+```
+
