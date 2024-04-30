@@ -13,7 +13,6 @@ Building Docker Image and pushing to a Public Docker Repository
 ```
 docker build -t sample-nginx-app:v1 .
 docker tag sample-nginx-app:v1 thedevopschannel/sample-nginx-app:v1
-docker tag sample-nginx-app:v1 thedevopschannel/sample-nginx-app:v1
 docker push thedevopschannel/sample-nginx-app:v1
 
 ```
@@ -30,7 +29,6 @@ provide-the-access-key
 Building the docker image & pushing to the private dockerhub registry
 ```
 docker build -t sample-nginx-private:v1 .
-docker tag sample-nginx-private:v1 thedevopschannel/sample-nginx-private:v1
 docker tag sample-nginx-private:v1 thedevopschannel/sample-nginx-private:v1
 docker push thedevopschannel/sample-nginx-private:v1
 ```
@@ -53,7 +51,7 @@ metadata:
 spec:
   containers:
   - name: private-app
-    image: thedevopschannel/sample-nginx-private:pvt1
+    image: thedevopschannel/sample-nginx-private:v1
   imagePullSecrets:
   - name: regcred
 ```
