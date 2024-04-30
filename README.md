@@ -21,15 +21,15 @@ Building Docker Image and pushing to a Private Docker Repository
 First login to the repository from the termination to manke and entry of the dockerhub access token at /root/.docker/config.json file
 
 ```
-docker login  -u thedevopschannel
+docker login  -u thedevopschannel #replace with your dockerhub username
 
 provide-the-access-key
 ```
 Building the docker image & pushing to the private dockerhub registry
 ```
 docker build -t nginx-private:pvt1 .
-docker tag nginx-private:pvt1 thedevopschannel/sample-nginx-private:pvt1
-docker push thedevopschannel/sample-nginx-private:pvt1
+docker tag nginx-private:pvt1 thedevopschannel/sample-nginx-private:pvt1 #localimage:tagname repository:tagname
+docker push thedevopschannel/sample-nginx-private:pvt1 #repository:tagname
 ```
 
 Creating a Kubernetes secret for the Pods to use
