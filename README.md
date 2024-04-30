@@ -11,9 +11,11 @@ git clone https://github.com/thedevopschannel/sample-nginx-app.git
 Building Docker Image and pushing to a Public Docker Repository 
 ------------
 ```
-docker build -t sample-nginx-app .
-docker tag sample-nginx-app thedevopschannel/sample-nginx-app:sample-nginx-app
-docker push thedevopschannel/sample-nginx-app:sample-nginx-app
+docker build -t sample-nginx-app:v1 .
+docker tag sample-nginx-app thedevopschannel/sample-nginx-app:v1
+docker tag sample-nginx-app:v1 thedevopschannel/sample-nginx-app:v1
+docker push thedevopschannel/sample-nginx-app:v1
+
 ```
 
 Building Docker Image and pushing to a Private Docker Repository 
@@ -27,9 +29,10 @@ provide-the-access-key
 ```
 Building the docker image & pushing to the private dockerhub registry
 ```
-docker build -t nginx-private:pvt1 .
-docker tag nginx-private:pvt1 thedevopschannel/sample-nginx-private:pvt1 #localimage:tagname repository:tagname
-docker push thedevopschannel/sample-nginx-private:pvt1 #repository:tagname
+docker build -t sample-nginx-private:v1 .
+docker tag sample-nginx-private:v1 thedevopschannel/sample-nginx-private:v1
+docker tag sample-nginx-private:v1 thedevopschannel/sample-nginx-private:v1
+docker push thedevopschannel/sample-nginx-private:v1
 ```
 
 Creating a Kubernetes secret for the Pods to use
