@@ -52,6 +52,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: private-web-pod
+  labels:
+    run: private-web-pod
 spec:
   containers:
   - name: private-app
