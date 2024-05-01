@@ -63,6 +63,6 @@ spec:
 ```
 Expose the App
 ```
-kubectl expose pod podname --target-port=80 --port=8080 --type=NodePort
+kubectl expose pod private-web-pod --target-port=80 --port=8080 --type=NodePort
 ```
 
