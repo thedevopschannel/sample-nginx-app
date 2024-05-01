@@ -32,7 +32,11 @@ docker build -t sample-nginx-private:v1 .
 docker tag sample-nginx-private:v1 thedevopschannel/sample-nginx-private:v1
 docker push thedevopschannel/sample-nginx-private:v1
 ```
+Location of docker config file
+```
+/root/.docker/config.json
 
+```
 Creating a Kubernetes secret for the Pods to use
 ------------
 ```
